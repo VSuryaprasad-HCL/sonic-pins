@@ -674,7 +674,7 @@ TEST_P(L3MulticastTestFixture, BasicReplicationProgramming) {
   // Send test packets.
   LOG(INFO) << "Sending traffic to verify added multicast programming.";
   dvaas::DataplaneValidationParams dvaas_params =
-      dvaas::DefaultGpinsDataplaneValidationParams();
+      dvaas::DefaultpinsDataplaneValidationParams();
   dvaas_params.packet_test_vector_override = vectors;
   ASSERT_OK_AND_ASSIGN(
       dvaas::ValidationResult validation_result,
@@ -704,7 +704,7 @@ TEST_P(L3MulticastTestFixture, BasicReplicationProgramming) {
   // Send test packets.
   // LOG(INFO) << "Sending traffic to verify deleted multicast programming.";
   // dvaas::DataplaneValidationParams dvaas_params_del =
-  //    dvaas::DefaultGpinsDataplaneValidationParams();
+  //    dvaas::DefaultpinsDataplaneValidationParams();
   // dvaas_params_del.packet_test_vector_override = vectors_del;
   // ASSERT_OK_AND_ASSIGN(
   //     dvaas::ValidationResult validation_result_del,
